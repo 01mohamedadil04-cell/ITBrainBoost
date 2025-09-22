@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Networking Questions</title>
+  <style>
+    body{font-family: Arial, Helvetica, sans-serif;max-width:720px;margin:24px auto;padding:0 16px;color:#111}
+    .card{border-radius:10px;padding:18px;border:1px solid #ddd;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    h1{font-size:22px;margin:0 0 12px}
+    .question{margin:16px 0;font-weight:600}
+    .options label{display:block;padding:8px;border-radius:6px;margin:6px 0;border:1px solid transparent;cursor:pointer}
+    .options input{margin-right:8px}
+    .controls{display:flex;gap:8px;margin-top:14px}
+    button{padding:8px 12px;border-radius:8px;border:0;background:#2b6cb0;color:white;cursor:pointer}
+    button[disabled]{opacity:0.5;cursor:default}
+    .result{margin-top:16px;padding:12px;background:#f7f7f7;border-radius:8px}
+    .score{font-size:18px;font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Networking Quiz — 20 Questions</h1>
+    <div id="quiz">
+      <div id="qnum"></div>
+      <div class="question" id="question"></div>
+      <div class="options" id="options"></div>
+      <div class="controls">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+        <button id="submit">Submit</button>
+      </div>
+      <div id="feedback" class="result" style="display:none"></div>
+    </div>
+  </div>
+
+<script>
+const questions = [
+  { q: 'Which layer of the OSI model is responsible for routing between networks?', options: ['Data Link','Network','Transport','Application'], answer: 1 },
+  { q: 'Which protocol provides reliable, connection-oriented communication?', options: ['UDP','ICMP','TCP','ARP'], answer: 2 },
+  { q: 'What does DHCP do in a network?', options: ['Resolves domain names','Assigns IP addresses automatically','Encrypts traffic','Forwards packets between networks'], answer: 1 },
+  { q: 'Which address is unique to a network interface card (NIC)?', options: ['IP address','MAC address','Subnet mask','Default gateway'], answer: 1 },
+  { q: 'Which protocol translates domain names like example.com to IP addresses?', options: ['DHCP','DNS','FTP','SMTP'], answer: 1 },
+  { q: 'What port number is normally used by HTTP?', options: ['21','22','80','443'], answer: 2 },
+  { q: 'Which protocol is connectionless and used for streaming?', options: ['TCP','UDP','ARP','SSH'], answer: 1 },
+  { q: 'What is the function of ARP (Address Resolution Protocol)?', options: ['Map domain names to IPs','Map IP addresses to MAC addresses','Assign IP addresses','Route packets'], answer: 1 },
+  { q: 'Which device operates primarily at the Data Link layer and forwards frames by MAC address?', options: ['Router','Switch','Hub','Firewall'], answer: 1 },
+  { q: 'What does NAT (Network Address Translation) do?', options: ['Converts domain names','Translates private IPs to public IPs','Encrypts packets','Blocks traffic'], answer: 1 },
+  { q: 'Which IP version has 128-bit addresses?', options: ['IPv4','IPv6','Both','Neither'], answer: 1 },
+  { q: 'What is the main difference between a switch and a hub?', options: ['Switches operate at layer 3, hubs at layer 2','Switches forward by MAC, hubs broadcast to all ports','Hubs are smarter than switches','Switches and hubs are identical'], answer: 1 },
+  { q: 'Which tool uses ICMP to test connectivity to another host?', options: ['traceroute','ftp','ping','nslookup'], answer: 2 },
+  { q: 'Which protocol secures web traffic with encryption (HTTPS)?', options: ['TLS/SSL','FTP','Telnet','SMTP'], answer: 0 },
+  { q: 'What is a subnet mask used for?', options: ['To encrypt data','To divide an IP network into subnets','To assign DNS servers','To route between ISPs'], answer: 1 },
+  { q: 'Which protocol is used to transfer files between hosts?', options: ['FTP','SMTP','DNS','ARP'], answer: 0 },
+  { q: 'Which layer of the OSI model provides end-to-end communication and flow control?', options: ['Application','Transport','Network','Physical'], answer: 1 },
+  { q: 'What is a default gateway?', options: ['The primary DNS server','A router that forwards traffic to outside networks','A firewall rule','A MAC address'], answer: 1 },
+  { q: 'What does VLAN stand for?', options: ['Virtual Local Area Network','Variable LAN Address Node','Verified LAN Access','Virtual Link Aggregation Name'], answer: 0 },
+  { q: 'Which statement describes latency?', options: ['Amount of data transferred per second','Delay between sending and receiving data','Number of active connections','Size of a packet'], answer: 1 }
+];
+
+let current = 0;
+const userAnswers = new Array(questions.length).fill(null);
+
+const qnumEl = document.getElementById('qnum');
+const questionEl = document.getElementById('question');
+const optionsEl = document.getElementById('options');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+const submitBtn = document.getElementById('submit');
+const feedbackEl = document.getElementById('feedback');
+
+function renderQuestion(index){
+  const item = questions[index];
+  qnumEl.textContent = `Question ${index+1} of ${questions.length}`;
+  questionEl.textContent = item.q;
+  optionsEl.innerHTML = '';
+  item.options.forEach((opt, i) => {
+    const id = `opt-${index}-${i}`;
+    const label = document.createElement('label');
+    label.htmlFor = id;
+    label.innerHTML = `<input type="radio" name="answer" id="${id}" value="${i}" ${userAnswers[index]===i? 'checked' : ''} /> ${opt}`;
+    optionsEl.appendChild(label);
+  });
+  prevBtn.disabled = index === 0;
+  nextBtn.disabled = index === questions.length-1;
+  feedbackEl.style.display = 'none';
+}
+
+optionsEl.addEventListener('change', (e)=>{
+  if(e.target && e.target.name === 'answer'){
+    userAnswers[current] = Number(e.target.value);
+  }
+});
+
+prevBtn.addEventListener('click', ()=>{
+  if(current>0) { current--; renderQuestion(current); }
+});
+nextBtn.addEventListener('click', ()=>{
+  if(current<questions.length-1) { current++; renderQuestion(current); }
+});
+
+submitBtn.addEventListener('click', ()=>{
+  const answeredCount = userAnswers.filter(a=>a!==null).length;
+  let score = 0;
+  questions.forEach((q,i)=>{ if(userAnswers[i]===q.answer) score++; });
+  const percent = Math.round((score / questions.length) * 100);
+  feedbackEl.style.display = 'block';
+  feedbackEl.innerHTML = `
+    <div class="score">Score: ${score} / ${questions.length} (${percent}%)</div>
+    <div>Answered: ${answeredCount} out of ${questions.length}</div>
+    <details style="margin-top:8px">
+      <summary>Show answers</summary>
+      <ol>
+        ${questions.map((q,i)=>`<li><strong>${q.q}</strong><br/>Your answer: ${userAnswers[i]===null? '<em>Not answered</em>' : q.options[userAnswers[i]]} — Correct: ${q.options[q.answer]}</li>`).join('')}
+      </ol>
+    </details>
+  `;
+  feedbackEl.scrollIntoView({behavior:'smooth'});
+});
+
+renderQuestion(0);
+</script>
+</body>
+</html>
