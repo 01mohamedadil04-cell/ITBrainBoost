@@ -1,0 +1,161 @@
+/* === Home.css (Flat Version) === */
+
+/* Header */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.5);
+  /* no box-shadow, flat */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h2 {
+  color: #fff;
+}
+
+header button {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #ab4e52;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+header button:hover {
+  background: #ff7f50;
+  transform: none; /* remove lift */
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ab4e52, #ff7f50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.info {
+  font-size: 1.2rem;
+  color: #cfcfcf;
+  margin-bottom: 30px;
+}
+
+/* Input Fields */
+.input {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;        /* remove highlight */
+  box-shadow: none;     /* remove shadow */
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.input::placeholder {
+  color: #ccc;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 28px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  transform: none;  /* remove hover lift */
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, #ab4e52, #ff7f50);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  transform: none; /* remove hover lift */
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+.btn.secondary:hover {
+  background: rgba(171, 78, 82, 0.2);
+  border-color: #ab4e52;
+  transform: none; /* remove hover lift */
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 40px 0 50px;
+}
+
+.feature-card {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 15px;
+  padding: 25px;
+  width: 250px;
+  text-align: center;
+  transition: none; /* remove hover transition */
+  box-shadow: none; /* flat */
+}
+
+.feature-card:hover {
+  transform: none; /* remove hover lift */
+}
+
+.feature-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  color: #ff7f50;
+}
+
+/* Footer */
+.footer {
+  font-size: 0.9rem;
+  color: #ddd;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature-card {
+    width: 90%;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .info {
+    font-size: 1rem;
+  }
+}
