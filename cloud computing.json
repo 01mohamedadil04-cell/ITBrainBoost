@@ -1,0 +1,103 @@
+[
+    {
+        "question": "what is Cloud Computing mainly about?",
+        "options" : ["Data analysis", "Delivering computing services over the internrt", "Installing software locally", "Only storing files"],
+        "answer" : "Delivering computing services over the internrt"
+    },
+    {
+        "question": "Which of the following is NOT a cloud service model?",
+        "options" :["SaaS", "PaaS", "laaS", "BIOS"], 
+        "answer" : "BIOS"
+    },
+    {
+        "question": "In SaaS, software is...",
+        "options" :["Installed on user's computer", "Provided as a service via the internet", "only for developers", "Only for system admins" ],
+        "answer": "Provided as a service via the internet"
+    },
+    {
+        "question": "Which company is a leading cloud provider?",
+        "options": ["Amazon Web Services", "Nokia", "Intel", "HP"],
+        "answer": "Amazon Web Services"
+    },
+    {
+        "question": "The main advantage of cloud computing is..",
+        "options": ["High initial cost", "Scalability and flexibility", "Requires powerful hardware locally", "No internet needed"],
+        "answer": "Scalability and flexibility"
+    },
+    {
+         "question": "What does laaS provide",
+        "options": ["Software applications", "Infrastructure resources like servers and storage", "Programming tools", "Security services"],
+        "answer": "Infrastructure resources like servers and storage"
+    },
+    {
+        "question": "Which service model allows developers to build applications without managing infrastructure?",
+        "options":["laaS", "PaaS", "SaaS", "VPN"],
+        "answer": "Paas"
+    },
+    {
+        "question": "An example of SaaS is...",
+        "options" :["Google Docs","Microsoft Azure", "Amazon EC2", "VMware"],
+        "answer": "Google Docs"
+    },
+    {
+        "question":"Which deployment model is for a single organization only?",
+        "options":["Public cloud", "Private cloud", "Hybrid cloud", "Distributed cloud"],
+        "answer":"Private cloud"
+    },
+    {
+        "question":"Which deployment model combines public and private clouds",
+        "options":["Public", "Hybrid", "Community", "Distributed"],
+        "answer":"Hybrid"
+    },
+    {
+        "question":"What is virtualization is cloud computing?",
+        "options":["Using real hardware only", "Creating a virtual version of hardware/resources","Buying physical servers", "Data encryption"],
+        "answer":"Creating a virtual version of hardware/resources"
+    },
+    {
+        "question":"Which protocol is commonly used to access cloud services?",
+        "options":["HTTP/HTTPS", "SMTP", "POP3", "Bluetooth"],
+        "answer":"HTTP/HTTPS"
+    },
+    {
+        "question":"Which of the following is NOT a benefit of cloud computing?",
+        "options":["On-demand self-service", "Location-independent","Automatic updates", "High upfront investment"],
+        "answer":"High upfront investment"
+    },
+    {
+        "question":"Which one is an example of laaS",
+        "options":["Amazon EC2", "Gmail", "Google app engine", "Dropbox"],
+        "answer":"Amazon EC2"
+    },
+    {
+        "question":"Cloud computing reduces....",
+        "options":["Internet use", "IT infrastructure costs", "Security", "Data backups"],
+        "answer":"IT infrastructure costs"
+    },
+    {
+        "question":"Which organization controls cloud standards?",
+        "options":["IEEE", "NIST", "WHO", "NASA"],
+        "answer":"NIST"
+    },
+    {
+        "question":"Which of these is a cloud storage provider?",
+        "options":["Dropbox", "Photoshop", "Java", "Windows Media Player"],
+        "answer":"Dropbox"
+    },
+    {
+        "question":"Which layer provides the hardware in cloud computing?",
+        "options":["Application layer", "Infrastructure layer", "Platform layer", "Software layer"],
+        "answer":"Infrastructure layer"
+    },
+    {
+        "question":"Which security issue is common is cloud computing?",
+        "options":["Data breach", "Lack of scalability", "No internet needed", "Free services"],
+        "answer": "Data breach"
+    },
+    {
+        "question":"The pay-as-you-go concept is cloud computing means..",
+        "options":["Users pay only for what they use", "Free unlimited access", "Buy hardware in advance", "Fixed payment regardless of usage"],
+        "answer":"Users pay only for what they use"
+
+    }
+]
