@@ -1,0 +1,101 @@
+[
+    {
+        "question": "Which protocol is used to securely transfer files over the Internet?",
+        "options": ["FTP", "SFTP", "HTTP", "SMTP"],
+        "answer": "SFTP"
+    },
+    {
+        "question": "What does a firewall primarily do?",
+        "options": ["Encrypt data", "Block unauthorized access", "Detect viruses", "Monitor CPU usage"],
+        "answer": "Block unauthorized access"
+    },
+    {
+        "question": "Which type of attack involves overwhelming a system with traffic?",
+        "options": ["Phishing", "DDoS", "SQL Injection", "XSS"],
+        "answer": "DDoS"
+    },
+    {
+        "question": "What is the strongest form of password protection?",
+        "options": ["Plaintext", "Hashing with salt", "Base64 Encoding", "Symmetric encryption"],
+        "answer": "Hashing with salt"
+    },
+    {
+        "question": "Which tool is commonly used to capture and analyze network traffic?",
+        "options": ["Nmap", "Wireshark", "Metasploit", "Burp Suite"],
+        "answer": "Wireshark"
+    },
+    {
+        "question": "What does SQL Injection target?",
+        "options": ["Operating System", "Database", "Network Router", "Firewall"],
+        "answer": "Database"
+    },
+    {
+        "question": "Which type of malware disguises itself as legitimate software?",
+        "options": ["Worm", "Trojan", "Spyware", "Ransomware"],
+        "answer": "Trojan"
+    },
+    {
+        "question": "What does HTTPS use to secure communication?",
+        "options": ["TLS/SSL", "VPN", "Firewall", "SSH"],
+        "answer": "TLS/SSL"
+    },
+    {
+        "question": "What is phishing?",
+        "options": ["A DDoS attack", "Tricking users into revealing sensitive info", "Encrypting files for ransom", "Network scanning"],
+        "answer": "Tricking users into revealing sensitive info"
+    },
+    {
+        "question": "Which protocol is used for secure remote login?",
+        "options": ["Telnet", "SSH", "HTTP", "SNMP"],
+        "answer": "SSH"
+    },
+    {
+        "question": "What does a VPN provide?",
+        "options": ["Faster internet", "Encrypted connection", "Extra storage", "Firewall protection"],
+        "answer": "Encrypted connection"
+    },
+    {
+        "question": "Which attack involves injecting malicious scripts into a website?",
+        "options": ["SQL Injection", "Cross-Site Scripting (XSS)", "Man-in-the-Middle", "Phishing"],
+        "answer": "Cross-Site Scripting (XSS)"
+    },
+    {
+        "question": "What is the purpose of two-factor authentication (2FA)?",
+        "options": ["To speed up login", "To add an extra security layer", "To reset passwords", "To monitor browsing history"],
+        "answer": "To add an extra security layer"
+    },
+    {
+        "question": "Which type of malware locks files and demands payment?",
+        "options": ["Adware", "Trojan", "Ransomware", "Spyware"],
+        "answer": "Ransomware"
+    },
+    {
+        "question": "Which tool is commonly used for penetration testing?",
+        "options": ["Wireshark", "Metasploit", "Notepad++", "Git"],
+        "answer": "Metasploit"
+    },
+    {
+        "question": "What does social engineering exploit?",
+        "options": ["Software bugs", "Network protocols", "Human psychology", "Firewall settings"],
+        "answer": "Human psychology"
+    },
+    {
+        "question": "Which standard is used for wireless network security?",
+        "options": ["WPA2", "HTTP", "SSL", "FTP"],
+        "answer": "WPA2"
+    },
+    {
+        "question": "Which type of attack involves secretly listening to network communication?",
+        "options": ["Eavesdropping", "Phishing", "Spoofing", "Brute force"],
+        "answer": "Eavesdropping"
+    },
+    {
+        "question": "Which protocol is used for email encryption?",
+        "options": ["IMAP", "SMTP", "PGP", "FTP"],
+        "answer": "PGP"
+    },
+    {
+        "question": "Which cybersecurity principle ensures data is not altered or tampered with?",
+        "options": ["Confidentiality", "Integrity", "Availability", "Authentication"],
+        "answer": "Integrity"
+    }
