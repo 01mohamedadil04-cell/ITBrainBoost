@@ -1,0 +1,22 @@
+[
+  { "question": "What does HTML stand for?", "options": ["HyperText Markup Language", "HighText Markup Language", "HyperTool Markup Language", "HomeText Markup Language"], "answer": "HyperText Markup Language" },
+  { "question": "Which tag is used for inserting a line break in HTML?", "options": ["<break>", "<lb>", "<br>", "<line>"], "answer": "<br>" },
+  { "question": "Which language is used to style web pages?", "options": ["HTML", "Python", "CSS", "Java"], "answer": "CSS" },
+  { "question": "Which language is used for web page interactivity?", "options": ["C++", "JavaScript", "PHP", "SQL"], "answer": "JavaScript" },
+  { "question": "Which HTML attribute is used to define inline styles?", "options": ["class", "style", "font", "css"], "answer": "style" },
+  { "question": "Which tag is used to create a hyperlink in HTML?", "options": ["<a>", "<link>", "<href>", "<url>"], "answer": "<a>" },
+  { "question": "What does CSS stand for?", "options": ["Cascading Style Sheets", "Computer Style Sheets", "Creative Style System", "Custom Style Scripts"], "answer": "Cascading Style Sheets" },
+  { "question": "Which property is used in CSS to change text color?", "options": ["color", "font-color", "text-color", "background-color"], "answer": "color" },
+  { "question": "Which symbol is used for comments in CSS?", "options": ["//", "/* */", "<!-- -->", "#"], "answer": "/* */" },
+  { "question": "What is the correct HTML element for the largest heading?", "options": ["<head>", "<h6>", "<h1>", "<heading>"], "answer": "<h1>" },
+  { "question": "Which JavaScript keyword is used to declare a variable?", "options": ["var", "dim", "let", "Both var and let"], "answer": "Both var and let" },
+  { "question": "Which method is used to add an element to the end of an array in JavaScript?", "options": ["push()", "pop()", "shift()", "unshift()"], "answer": "push()" },
+  { "question": "Which HTML tag is used to display an image?", "options": ["<img>", "<image>", "<src>", "<picture>"], "answer": "<img>" },
+  { "question": "Which HTML tag is used to create a list with bullets?", "options": ["<ol>", "<ul>", "<li>", "<list>"], "answer": "<ul>" },
+  { "question": "Which attribute specifies the destination URL of a link?", "options": ["src", "href", "link", "url"], "answer": "href" },
+  { "question": "Which JavaScript function is used to display a message in the browser console?", "options": ["alert()", "console.log()", "print()", "msg()"], "answer": "console.log()" },
+  { "question": "Which tag is used to include JavaScript code in HTML?", "options": ["<js>", "<script>", "<javascript>", "<code>"], "answer": "<script>" },
+  { "question": "Which HTML element defines the document's title?", "options": ["<meta>", "<title>", "<head>", "<header>"], "answer": "<title>" },
+  { "question": "Which property is used to change the background color in CSS?", "options": ["bgcolor", "color", "background-color", "background"], "answer": "background-color" },
+  { "question": "Which HTML element is used to group related form controls?", "options": ["<fieldset>", "<form>", "<input>", "<group>"], "answer": "<fieldset>" }
+]
