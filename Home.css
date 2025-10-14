@@ -1,4 +1,4 @@
-/* Basic Reset and Setup */
+/* ===== Basic Reset and Setup ===== */
 body {
   margin: 0;
   padding: 0;
@@ -7,11 +7,12 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.home-page {
+.home-page, .subject-page {
   overflow-x: hidden;
+  padding-top: 80px; /* offset for fixed header */
 }
 
-/* Header/Navigation Bar Styling */
+/* ===== Header/Navigation Bar Styling ===== */
 .header {
   display: flex;
   justify-content: space-between;
@@ -52,13 +53,12 @@ nav ul li a:hover {
   color: #ff8888;
 }
 
-/* Active link (Home) */
 nav ul li a.active {
   color: #ff3333;
   border-bottom: 2px solid #ff3333;
 }
 
-/* Get Started Buttons */
+/* ===== Get Started Buttons ===== */
 .get-started-nav, .get-started-main {
   background-color: #d11f56;
   color: #ffffff;
@@ -74,7 +74,7 @@ nav ul li a.active {
   background-color: #a31843;
 }
 
-/* Hero Section */
+/* ===== Hero Section ===== */
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -85,7 +85,7 @@ nav ul li a.active {
 
 .hero-content {
   max-width: 800px;
-  padding-top: 60px; /* Offset for fixed header */
+  padding-top: 60px;
 }
 
 .hero-content h1 {
@@ -107,7 +107,7 @@ nav ul li a.active {
   box-shadow: 0 4px 15px rgba(209, 31, 86, 0.4);
 }
 
-/* Footer */
+/* ===== Footer ===== */
 footer {
   text-align: center;
   padding: 20px 0;
@@ -120,6 +120,7 @@ footer p {
   color: #888;
 }
 
+/* ===== Logout Button ===== */
 .logout-button {
   padding: 8px 16px;
   margin-left: 10px;
@@ -136,7 +137,69 @@ footer p {
   background: #ff7875;
 }
 
-/* Responsive Design */
+/* ===== Subject Cards (SubjectSelect page) ===== */
+.subject-page .title {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature-card {
+  cursor: pointer;
+  width: 220px;
+  padding: 30px 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  border-top: 6px solid var(--card-color);
+  background: linear-gradient(135deg, var(--card-color)22, var(--card-color)11);
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+/* Remove hover lift effect */
+.feature-card:hover,
+.feature-card:focus {
+  transform: none;       /* No moving up */
+  box-shadow: none;      /* No shadow */
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.feature-name {
+  margin-top: 5px;
+}
+
+.btn-secondary {
+  padding: 8px 16px;
+  margin-left: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #ff4d4f;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-secondar {
+  background: #ff7875;
+}
+
+/* ===== Responsive Design ===== */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -163,5 +226,14 @@ footer p {
   .get-started-main {
     padding: 12px 30px;
     font-size: 18px;
+  }
+
+  .features {
+    gap: 15px;
+  }
+
+  .feature-card {
+    width: 90%;
+    max-width: 250px;
   }
 }
