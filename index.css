@@ -1,0 +1,116 @@
+/* Base Styling for the whole application */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    /* This ensures the hero section covers the full viewport height */
+    min-height: 100vh;
+}
+
+/* --- Header/Navigation Bar Styling --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff3333;
+    text-decoration: none; /* Make sure logo is not underlined if it's a link */
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.nav-item a:hover {
+    color: #ff8888;
+}
+
+/* Active link style (e.g., for the current page) */
+.nav-item a.active {
+    color: #ff3333;
+    border-bottom: 2px solid #ff3333;
+}
+
+/* --- Button Styling (Shared) --- */
+.get-started-nav, .get-started-main {
+    background-color: #d11f56;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.get-started-nav:hover, .get-started-main:hover {
+    background-color: #a31843;
+}
+
+/* --- Main Hero Section Styling --- */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding-top: 60px; /* Offset for the fixed header */
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    color: #ff3333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #cccccc;
+}
+
+/* Style the main 'Get Started' button to be larger */
+.get-started-main {
+    padding: 15px 40px;
+    font-size: 20px;
+    box-shadow: 0 4px 15px rgba(209, 31, 86, 0.4);
+}
+
+/* --- Footer Styling --- */
+.footer {
+    padding: 15px 50px;
+    border-top: 1px solid #333;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    background-color: #1a1a1a; /* Ensure the footer has a dark background */
+    width: 100%;
+    box-sizing: border-box;
+}
