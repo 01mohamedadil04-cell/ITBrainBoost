@@ -1,14 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Home.css'; // use Home.css for styling
+import Header from '../components/Header';
+import './Home.css';
 
 export default function SubjectSelect() {
   const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem('quizUser') || 'null');
-
-  React.useEffect(() => {
-    if (!user) navigate('/register', { replace: true });
-  }, [user, navigate]);
 
   const subjects = [
     { name: 'Web Development', slug: 'web', color: '#ab4e52', icon: '🌐' },
@@ -18,30 +14,28 @@ export default function SubjectSelect() {
   ];
 
   return (
-    <div className="container">
-      <h1 className="title">Choose Your Subject</h1>
-      
-    
+    <div className="subject-page">
+      {/* Header */}
+      <Header />
 
-      <div style={{ display:'flex', flexWrap:'wrap', justifyContent:'center', gap:'25px', marginTop:'25px' }}>
-        {subjects.map(sub => (
+      {/* Page Title */}
+      <h1 className="title">Choose Your Subject</h1>
+
+      {/* Subject Cards */}
+      <div className="features">
+        {subjects.map((s) => (
           <div
-            key={sub.slug}
-            className="card"
-            style={{ width:'220px', cursor:'pointer', borderTop:`5px solid ${sub.color}` }}
-            onClick={() => navigate(`/quiz/${sub.slug}`)}
+            key={s.slug}
+            className="feature-card"
+            style={{ '--card-color': s.color }}
+            onClick={() => navigate(`/quiz/${s.slug}`)}
+            tabIndex={0} // keyboard accessible
+            onKeyDown={(e) => e.key === 'Enter' && navigate(`/quiz/${s.slug}`)}
           >
-            <div style={{ fontSize:'3rem', marginBottom:'10px', textAlign:'center' }}>{sub.icon}</div>
-            <h3 style={{ color:'#ff7f50', textAlign:'center', marginBottom:'8px' }}>{sub.name}</h3>
-            <p style={{ fontSize:'0.95rem', color:'#cfcfcf', textAlign:'center' }}>
-            
-            </p>
+            <div className="feature-icon">{s.icon}</div>
+            <div className="feature-name">{s.name}</div>
           </div>
         ))}
-      </div>
-
-      <div style={{marginTop:20, textAlign:'center'}}>
-        <button className="btn secondary" onClick={() => navigate('/')}>Back to Home</button>
       </div>
     </div>
   );
